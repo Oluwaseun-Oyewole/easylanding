@@ -14,6 +14,10 @@ body{
     font-family: 'Public Sans', sans-serif;
     font-size: $font-med;
     color:$grayishBlue;
+
+    &.noscroll{
+        overflow: hidden;
+    }
 }
 
 *, a:visited, a:hover{
@@ -35,7 +39,7 @@ body{
 
 .flex{
     display:flex;
-    
+
     &-jc-sb{
         justify-content: space-between;  
     }
@@ -48,6 +52,10 @@ body{
 
 }
 
+.container{
+    padding-left:1.5rem;
+    padding-right:1.5rem;
+}
 
 // visibility
 .hide-for-mobile{
