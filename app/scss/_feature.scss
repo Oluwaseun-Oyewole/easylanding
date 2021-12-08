@@ -9,7 +9,7 @@
     }
 
 
-    &__intro{
+    &__intro{ 
         @include breakpoint-up(large){
             width: 60%;
         }
