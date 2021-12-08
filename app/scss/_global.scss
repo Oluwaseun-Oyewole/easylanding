@@ -7,6 +7,7 @@ html{
     box-sizing: inherit;
 }
 
+
 body{
     padding:0;
     margin:0;
@@ -15,6 +16,12 @@ body{
     font-size: $font-med;
     color:$grayishBlue;
 
+
+    @include breakpoint-up(large){
+        font-size: $font-lg;       
+    }
+
+
     &.noscroll{
         overflow: hidden;
     }
@@ -22,10 +29,11 @@ body{
 
 *, a:visited, a:hover{
     text-decoration: none; 
-    
 }
 
 .button{
+    display:inline-block;
+    font-size: $font-sm;
     padding:0.875rem 2.185rem;
     border-radius: 50px;
     cursor: pointer;
@@ -33,6 +41,14 @@ body{
     background: linear-gradient(to right, $limeGreen, $brigthCyan);
     color:$white;
     font-weight:400;
+
+    color:$white;
+    transition:opacity 300ms ease-in-out;
+
+    &:hover{
+        opacity:0.75;
+    }
+    
 }
 
 // flexbox syles
@@ -53,8 +69,42 @@ body{
 }
 
 .container{
-    padding-left:1.5rem;
-    padding-right:1.5rem;
+
+    max-width: 69.375rem;
+    margin: 0 auto;
+
+    &--pall{
+        padding-left:1.5rem;
+        padding-right:1.5rem;
+    
+        padding-top:2.25rem;
+        padding-bottom: 2.25rem;
+    }
+
+    &--py{
+        padding-top:2.25rem;
+        padding-bottom: 2.25rem
+    }
+    &--px{
+        padding-left:1.5rem;
+        padding-right:1.5rem;
+    }
+
+    &--pt{
+        padding-top:2.25rem;
+    }
+
+    &--bt{
+        padding-bottom: 2.25rem
+    }
+
+    &--pl{
+        padding-left:1.5rem;
+    }
+
+    &--pr{
+        padding-right:1.5rem;
+    }
 }
 
 // visibility
@@ -69,5 +119,8 @@ body{
     @include breakpoint-up(large){
         display:none;
     }
-}
-  
+
+    h1, h2, h3{
+        margin-top:0;
+    }
+}  

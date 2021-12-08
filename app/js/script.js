@@ -6,7 +6,6 @@ const fadeElems = document.querySelectorAll('.has-fade')
 
 const body = document.querySelector('body')
 
-
 btnHambuger.addEventListener('click', () => {
     // header.classList.toggle('open')
 
@@ -19,7 +18,6 @@ btnHambuger.addEventListener('click', () => {
             elem.classList.add('fade-out')
         })
     }
-
     else{
          body.classList.add('noscroll')
         header.classList.add('open') 

@@ -9,19 +9,7 @@
         padding-bottom:1.0625rem;
     }
 
-
     &.open{
-
-        .overlay{
-            opacity:0;
-            position:fixed;
-            top: 0;
-            left:0;
-            bottom:0;
-            right:0;
-            background-image:linear-gradient($darkBlue, transparent);
-            overflow: hidden;
-        }
         
         .header__toggle{
 
@@ -39,6 +27,16 @@
         }
     }
 
+    .overlay{
+        opacity:0;
+        position:fixed;
+        top: 0;
+        left:0;
+        bottom:0;
+        right:0;
+        background-image:linear-gradient($darkBlue, transparent);
+        overflow: hidden;
+    }
 
     &__logo{
 
@@ -64,7 +62,6 @@
         }
         }
     }
-
     
     &__links{
         >   a {
@@ -73,7 +70,7 @@
             position: relative;
              
             &:not(:last-child){
-                margin-right: 32px;;
+                margin-right: 32px;
             }
 
             &::before {
@@ -81,7 +78,6 @@
                 position: absolute;
                 display: block;
                 height: 5px;
-                height:5px;
                 left: 0;
                 right:0;
                 bottom:-30px;
@@ -90,13 +86,10 @@
 
                 transition: opacity 300ms ease-in-out;
             
-
-
                 }
             &:hover{
                 &::before{
                     opacity:1;
-                
                 }
             }
             &:visited{
@@ -107,16 +100,9 @@
 
     }
 
-    &__cta{
-        font-size: $font-sm;
-        color:$white;
-        transition:opacity 300ms ease-in-out;
-
-        &:hover{
-            opacity:0.75;
-        }
-    }
-
+    // &__cta{
+        
+    // }
 
     // menu class
     &__menu{
