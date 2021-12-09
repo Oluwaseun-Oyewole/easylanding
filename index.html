@@ -9,6 +9,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="app/scss/style.css"/>
+
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
     
   <title>Frontend Mentor | Easybank landing page</title>
 
@@ -20,9 +25,9 @@
 </head>
 <body>
 
-  <header class="header noscroll">
+  <header class="header noscroll" id="header">
     <div class="overlay has-fade"></div>
-      <nav class="flex flex-jc-sb flex-ai-c container container--pall ">
+      <nav class="flex flex-jc-sb flex-ai-c container container--pall nav">
         <a href="/" class="header__logo "><img src="./images/logo.svg" alt="Easybank" srcset=""></a>
         <a href="#" class="header__toggle hide-for-desktop" id="btnHambuger">
             <span></span>
@@ -36,6 +41,7 @@
           <a href="#" class="link">Contact</a>
           <a href="#" class="link">Blog</a>
           <a href="#" class="link">Careers</a>
+          
         </div>
         
         <a href="#" class="button header__cta hide-for-mobile">Request Invite</a>
@@ -299,10 +305,17 @@
             &copy; Easybank. All Rights Reserve
           </div>
         </div>
+          
+        <a class="footer__scroll scroll" href="#header">
+          <i class="fas fa-arrow-up"></i>
+        </a>
+
+
       </div>
       
 
   </footer>
+
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>

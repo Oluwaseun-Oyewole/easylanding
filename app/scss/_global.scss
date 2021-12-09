@@ -1,6 +1,7 @@
 html{
     font-size:100%;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *, *::before, *::after{
@@ -19,7 +20,7 @@ body{
 
 
     // for scrolling up
-    min-height: 200vh;
+    // min-height: 200vh;
 
 
     @include breakpoint-up(large){

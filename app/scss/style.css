@@ -186,6 +186,7 @@ html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
@@ -201,7 +202,6 @@ body {
   font-size: 1.125rem;
   color: #9698a6;
   overflow-x: hidden;
-  min-height: 200vh;
 }
 
 @media (min-width: 64em) {
@@ -794,5 +794,30 @@ p {
     -ms-grid-column-align: end;
         justify-self: end;
   }
+}
+
+.footer__scroll {
+  font-size: 1.2rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#31d35c), to(#2bb7da));
+  background: linear-gradient(#31d35c, #2bb7da);
+  height: 2rem;
+  width: 2rem;
+  color: #fafafa;
+  position: fixed;
+  bottom: 3rem;
+  right: 3.5rem;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  visibility: hidden;
+  z-index: -100;
+}
+
+.footer__showLink {
+  visibility: visible;
+  z-index: 100;
 }
 /*# sourceMappingURL=style.css.map */
