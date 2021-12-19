@@ -1,4 +1,4 @@
-#### bank landing page with HTML, SASS, JavaScript
+##### bank landing page with HTML, SASS, JavaScript
 
 ![alt text](images/Capture.PNG)
 
