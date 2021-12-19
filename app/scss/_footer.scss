@@ -16,6 +16,7 @@
             "social links1 links2 copyright";
             gap:1rem;
             justify-items: start;
+            
         }
     }
 
@@ -150,7 +151,7 @@
         align-items: center;
         border-radius: 5px;
 
-        visibility: hidden;
+        visibility: hidden; 
         z-index: -100;
 
     }

@@ -18,7 +18,6 @@ window.addEventListener('scroll', () => {
         scrollLink.classList.remove('footer__showLink')
     }
     
-
 })
 
 const body = document.querySelector('body')
