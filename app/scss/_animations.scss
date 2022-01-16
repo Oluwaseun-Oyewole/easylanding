@@ -1,48 +1,82 @@
-.has-fade{
-    visibility:hidden;
-}
+@keyframes fade-in {
 
-@keyframes fade-in{
     from{
-        visibility:hidden;
-        opacity:0;
+        opacity: 0;
+        visibility: hidden;
+
     }
 
-    1% {
+    to{
+        opacity: 1;
         visibility: visible;
-        opacity: 0;
-      }
-
-    to{
-        visibility:visible;
-        opacity:1;
     }
-}
 
-.fade-in{
-    animation:fade-in 300ms ease-in-out forwards;
-}
+     
+ }
 
-@keyframes fade-out{
+ .fade-in{
+    animation: fade-in 1s ease-in-out forwards;
+ }
+
+ @keyframes fade-out {
+
     from{
-
-        visibility:visible;
-        opacity:1;
-        
+        opacity: 1;
+        visibility: visible;
     }
 
-    99%{
-        visibility:visible;
-        opacity: 0;
-    }
 
     to{
-        visibility:hidden;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+     
+ }
+
+ .fade-out{
+    animation: fade-out 1s ease-in-out forwards;
+ }
+
+ .has-fade{
+     visibility:hidden;
+ }
+
+
+
+ @keyframes mobilefadeIn{
+     from{
         opacity:0;
+        top:-1rem;
+     }
+
+
+     to{
+           opacity:1;
+           top:20rem;
+
+     }
+ }
+
+ .mobile-fadeIn{
+     animation:mobilefadeIn 1s ease-in-out forwards;
+ }
+
+
+ @keyframes mobilefadeOut{
+    from{
+       opacity:1;
+       top:20rem;
+    }
+
+
+    to{
+          opacity:0;
+          top:-1em;
+
     }
 }
 
-.fade-out{
-    animation:fade-out 300ms ease-in-out forwards;
+.mobile-fadeOut{
+    animation:mobilefadeOut 1s ease-in-out;
 }
-

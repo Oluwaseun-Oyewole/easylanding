@@ -1,0 +1,179 @@
+.header{
+
+    position: relative;
+    z-index:1;
+    &.open{
+ 
+     .overlay{
+         visibility:visible;
+     }
+ 
+     .header__menu{
+ 
+         > span:first-child{
+             transform: rotate(45deg)
+         }   
+         >span:nth-child(2){
+                     opacity: 0;
+         }
+ 
+         >span:last-child{
+             transform: rotate(-45deg)
+         }
+ 
+ }
+ 
+ .mobilemenu{
+     opacity:1;
+ }
+    }
+ 
+ 
+     nav{
+         padding:1.0625rem 1.5rem; 
+         position: relative;
+         background: $white;;  
+      }
+ 
+ 
+     &__logo{
+         img{
+             width:8.8125rem;
+             height:22px;
+         }
+ 
+     }
+ 
+ 
+     &__menu{
+ 
+         >span{
+             display:block;
+             background: $darkBlue;
+             width:26px;
+             height:2px;
+             transition:all 400ms ease-in-out;
+             transform-origin: 2px 1.3px;
+ 
+             &:not(:last-child){
+                 margin-bottom:5px;
+             }
+         }
+ 
+     }
+ 
+     &__links{
+ 
+         a{
+             position: relative;
+             font-size: 0.875rem;
+             color: $grayishBlue;
+             transition: color 400ms ease-in-out;
+             
+ 
+             &:not(:last-child){
+                 margin-right: 2rem;
+             }
+             &:hover{
+                 color: $darkBlue;
+             }
+         }
+ 
+ 
+         a::before{
+             content: '';
+             position: absolute;
+             width: 100%;
+             display: block;
+             background: linear-gradient(to right, $limeGreen, $brigthCyan);
+             height: 1rem;
+             height: 5px;
+             left: 0;
+             right: 0;
+             // top: 3rem;
+             bottom:-35px;
+             opacity: 0;
+ 
+             transition: opacity 400ms ease-in-out;
+ 
+         }
+ 
+         a:hover{
+             &::before{
+                 opacity:1;
+             }
+         }
+ 
+         &__cta{
+             font-size: 50px;
+             transition: opacity 400ms ease-in-out;
+ 
+             &:hover{
+                 opacity: 0.75;
+                 color:yellow;
+             }
+         }
+ 
+ 
+ 
+     
+ } 
+ 
+ .overlay{
+ 
+    @include breakpoint-down(medium){
+        opacity: 0;
+        // display: none;
+    
+        background: linear-gradient($darkBlue, transparent);
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+ }
+ 
+ &__mobilemenu{
+     opacity:0;
+ 
+    @include breakpoint-down(medium){
+        opacity:0;
+     
+ 
+        background:$white;
+        padding: 1.625rem;
+        padding:1.625rem; 
+        border-radius: 5px;
+    
+        position: absolute;
+        width: calc(100% - 3rem);
+        left: 50%;
+        transform: translateX(-50%);
+    
+        margin-top: 1.5rem;
+    
+        a{
+            font-size:1.5rem;
+            color:$darkBlue;
+            padding:0.625rem;
+            display: block;
+            text-align: center;
+    
+            position: relative;
+            // opacity:0;
+    
+            &:hover{
+                color:$grayishBlue;
+                transition:all 400ms ease-in-out;
+            }
+    
+    
+        }
+
+    }
+     // test
+ }
+ 
+ 
+ }
