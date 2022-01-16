@@ -224,10 +224,6 @@
   }
 }
 
-.header__mobilemenu {
-  opacity: 0;
-}
-
 @media (max-width: 63.9375em) {
   .header__mobilemenu {
     opacity: 0;

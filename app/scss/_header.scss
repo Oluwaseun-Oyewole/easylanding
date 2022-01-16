@@ -135,12 +135,9 @@
  }
  
  &__mobilemenu{
-     opacity:0;
  
     @include breakpoint-down(medium){
         opacity:0;
-     
- 
         background:$white;
         padding: 1.625rem;
         padding:1.625rem; 
