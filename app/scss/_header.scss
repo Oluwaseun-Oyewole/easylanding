@@ -2,6 +2,7 @@
 
     position: relative;
     z-index:1;
+    
     &.open{
  
      .overlay{
@@ -113,7 +114,6 @@
                  color:yellow;
              }
          }
- 
  
  
      

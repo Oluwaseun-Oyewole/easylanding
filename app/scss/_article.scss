@@ -6,17 +6,13 @@
 
     &__grid{
         display:grid;
+        grid-template-columns:repeat(4, 1fr);
 
-        // grid-template-columns: repeat(auto-fit, minmax(17.343rem, 1fr));
 
-        grid-template-columns: 1fr;
-        gap: 1.875rem;
+        gap: 1.475rem;
 
-        @include breakpoint-up(medium){
+        @include breakpoint-down(medium){
             grid-template-columns: repeat(2, 1fr);
-        }
-        @include breakpoint-up(large){
-            grid-template-columns: repeat(4, 1fr);
         }
 
     }
@@ -29,7 +25,9 @@
         transition:all 100ms ease-in-out;
 
         &:hover{
-            transform:scale(1.05)
+            transform:scale(1.1);
+            transition:all 400ms ease-in-out;
+          
         }
 
     }
@@ -44,8 +42,10 @@
     &__text{
         color: $grayishBlue;
         padding:1.875rem 1.875rem 2.5rem 1.875rem;
+        // padding: 0.7rem;
+        // font-size: 1rem;
 
-        @include breakpoint-up(medium){
+        @include breakpoint-down(medium){
             padding:1.875rem 1.5636rem;
         }
     }
@@ -62,8 +62,9 @@
         margin-bottom: 0.5rem;
     }
 
-    &__desctiption{
+    &__description{
 
+    padding-top: 0.5rem;
     font-size: 0.8125rem;
     line-height: 1.2;
         
